@@ -1,14 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-title>inicio Sesion </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="/registro-formulario">
-    
-    Formulario
+
+  <ion-list inset>
+
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
   
-  </ion-button>
-  <ion-button routerLink="/listar-datos-formulario">Ir a Datos Ingresados</ion-button>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+   
+    <ion-button routerLink="/registro-formulario" >Registrarse</ion-button>
+  
+  </ion-list>
+  
+
 </ion-content>

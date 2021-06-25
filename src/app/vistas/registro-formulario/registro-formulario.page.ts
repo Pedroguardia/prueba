@@ -3,11 +3,11 @@ import { FormularioService } from '../../servicios/formulario.service';
 
 export class DatosFormulario{
   constructor(
-    public nombre:string,
-    public apellidos:string,
-    public rut:  string ,
-    public correo: string,
-    public password: string
+     public nom:string,
+     public apel:string,
+     public rut: string ,
+     public email: string,
+     public pass: string
   ){}
   
 }
