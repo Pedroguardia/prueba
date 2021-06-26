@@ -9,22 +9,22 @@ import { FormularioService } from '../../servicios/formulario.service';
 export class ListarDatosFormularioPage implements OnInit {
 
   constructor(private formularioService:FormularioService ) { }
-  datos_formularios;
+  datos_formulario;
   
   ngOnInit() {
   }
   ionViewWillEnter(){
-    this.obtenerDatosFormulario();
+    this.obtenerUsuario();
   }
 
-  obtenerDatosFormulario(){
-    this.formularioService.obtenerDatosFormulario().subscribe(
+  obtenerUsuario(){
+    this.formularioService.obtenerUsuario().subscribe(
       (response:any) => {
-        this.datos_formularios = response.registros;
-        console.log(this.datos_formularios)
+        this.datos_formulario = response.usuarios;
+       
       },
       error => {
-        alert("hay errores");
+        alert("Error peticion");
       }        
     );
 

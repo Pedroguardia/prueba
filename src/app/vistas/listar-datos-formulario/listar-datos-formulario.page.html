@@ -1,35 +1,30 @@
 <ion-header>
 <ion-toolbar>
     <ion-buttons slot="start">
-        <ion-back-button defaultHref="registro-formulario"></ion-back-button>
+        <ion-back-button defaultHref="/"></ion-back-button>
       </ion-buttons>
 <ion-title>Lista de Datos</ion-title>
 </ion-toolbar>
 </ion-header>
 <ion-content>
-<ion-card>
-<ion-item>
-    Nombre: {{datos_formulario_nombre}}
-</ion-item>
-<ion-item>
-    Run: {{datos_formulario_rut}}
-</ion-item>
-<ion-item>
-    Correo: {{datos_formulario_correo}}
-</ion-item>
-<ion-item>
-    Password: {{datos_formulario_password}}
-</ion-item>
-
-</ion-card>
-
-
-    
-   
-    
-
-
-
+    <ion-card *ngFor="let dato_formulario of datos_formulario ">
+        <ion-item>
+            Nombre: {{dato_formulario.nombre}}
+        </ion-item>
+        <ion-item>
+            Run: {{dato_formulario.rut}}
+        </ion-item>
+        <ion-item>
+            Apellidos: {{dato_formulario.apellidos}}
+        </ion-item>
+        <ion-item>
+            Correo: {{dato_formulario.correo}}
+        </ion-item>
+        <ion-item>
+            Password: {{datos_formulario.password}}
+        </ion-item>
+        
+        </ion-card>
 
 
 </ion-content>

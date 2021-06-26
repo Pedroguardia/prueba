@@ -19,7 +19,15 @@ const routes: Routes = [
   {
     path: 'listar-datos-formulario',
     loadChildren: () => import('./vistas/listar-datos-formulario/listar-datos-formulario.module').then( m => m.ListarDatosFormularioPageModule)
+  },  {
+    path: 'egresos',
+    loadChildren: () => import('./vistas/egresos/egresos.module').then( m => m.EgresosPageModule)
   },
+  {
+    path: 'ingresos',
+    loadChildren: () => import('./vistas/ingresos/ingresos.module').then( m => m.IngresosPageModule)
+  },
+
   
   
   

@@ -3,11 +3,11 @@ import { FormularioService } from '../../servicios/formulario.service';
 
 export class DatosFormulario{
   constructor(
-     public nom:string,
-     public apel:string,
+     public nombre:string,
+     public apellidos:string,
      public rut: string ,
-     public email: string,
-     public pass: string
+     public correo: string,
+     public password: string
   ){}
   
 }
@@ -30,7 +30,7 @@ export class RegistroFormularioPage implements OnInit {
 
     this.formularioService.registrarFormulario(this.datos_formulario).subscribe(
       (response:any)=>{
-        if(response.registro){
+        if(response.usuario){
           alert("Los datos fueron enviados correctamente!");
         }else{
           alert("Error al enviar los datos")

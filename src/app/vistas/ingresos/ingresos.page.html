@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+  <ion-title>Ingresos</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-card *ngFor="let dato_formulario of datos_formulario ">
+          <ion-item>
+              Descripcion: {{dato_formulario.descriocion}}
+          </ion-item>
+          <ion-item>
+              Precio: {{dato_formulario.precio}}
+          </ion-item>
+          <ion-item>
+              ID: {{dato_formulario.id}}
+          </ion-item>
+          
+          
+          </ion-card>
+  
+  
+  </ion-content>

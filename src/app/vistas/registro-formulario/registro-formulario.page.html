@@ -4,7 +4,7 @@
       <ion-toolbar>
         <ion-icon name="arrow-round-forward"></ion-icon>
         <ion-buttons slot="start">
-          <ion-back-button  defaultHref="inicio" text = "Volver"></ion-back-button>
+          <ion-back-button  defaultHref="7" text = "Volver"></ion-back-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
@@ -21,29 +21,28 @@
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Nombre:</ion-label>
-        <ion-input type = "text" name ="nom" [(ngModel)]= "datos_formulario_nom"></ion-input>
+        <ion-input type = "text" name ="nombre" [(ngModel)]= "dato_formulario_nombre"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Apellidos:</ion-label>
-        <ion-input type = "text" name ="apel"  [(ngModel)]= "datos_formulario_apel"></ion-input>
+        <ion-input type = "text" name ="apellidos"  [(ngModel)]= "dato_formulario_apellidos"></ion-input>
       </ion-item>      
       <ion-item>
         <ion-label position="floating">Run:</ion-label>
-        <ion-input type = "text" name ="rut"  [(ngModel)]= "datos_formulario_rut"></ion-input>
+        <ion-input type = "text" name ="rut"  [(ngModel)]= "dato_formulario_rut"></ion-input>
       </ion-item>     
       <ion-item>
         <ion-label position="floating">Correo:</ion-label>
-        <ion-input type = "text" name ="email"  [(ngModel)]= "datos_formulario_email"></ion-input>
+        <ion-input type = "text" name ="correo"  [(ngModel)]= "dato_formulario_correo"></ion-input>
       </ion-item>    
       <ion-item>
         <ion-label position="floating">Password:</ion-label>
-        <ion-input type = "text" name ="pass"  [(ngModel)]= "datos_formulario_pass"></ion-input>
+        <ion-input type = "text" name ="password"  [(ngModel)]= "dato_formulario_password"></ion-input>
       </ion-item>      
-      <ion-button (click)="enviarDatos()" expand="full" >Enviar</ion-button>
+      <ion-button (click)="enviarDatos()" expand="full"   routerLink="/listar-datos-formulario">Enviar</ion-button>
     </ion-card-content>
   </ion-card>
   
-<ion-button routerLink="/inicio" color="tertiary" >Ir a Inicio</ion-button>
- <ion-button routerLink="/listar-datos-formulario" color="tertiary"  >Ir a Datos Ingresados</ion-button>
+
 
 </ion-content>

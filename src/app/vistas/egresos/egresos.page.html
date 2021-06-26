@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Egresos Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        Seleccione un producto
+
+      </ion-label>
+    </ion-list-header>
+  
+    <ion-item>
+      <ion-label>Precios</ion-label>
+      <ion-select   [(ngModel)]= "egreso.id_usuarios"
+      placeholder="seleccionar">
+        <ion-select-option 
+        *ngFor="let Usuario of usuarios"
+        [value] = "Usuario._id">{{Usuario.nombre}}</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Hair Color</ion-label>
+      <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="Pan">Pan</ion-select-option>
+        <ion-select-option value="Harina">Harina</ion-select-option>
+        <ion-select-option value="Huevos">Huevos</ion-select-option>
+        <ion-select-option value="Bebida">Bebida</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+  </ion-list>
+</ion-content>
